@@ -1,0 +1,35 @@
+Final changes:
+support section এর email visibility fix করেছি
+homepage FAQ ছোট, cleaner, more useful করেছি
+footer এ Privacy Policy আর Terms & Conditions add করেছি
+privacy.html আর terms.html নতুন page add করেছি
+footer copy softer করেছি
+competition page এর weird encoding text fix করেছি
+support chips mobile-friendly করেছি
+code cleanup + final audit complete করেছি
+Important files:
+[index.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/index.html)
+[competition.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/competition.html)
+[announcements.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/announcements.html)
+[contact.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/contact.html)
+[privacy.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/privacy.html)
+[terms.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/terms.html)
+[assets/js/include.js](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/js/include.js)
+[assets/js/main.js](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/js/main.js)
+[assets/css/custom.css](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/css/custom.css)
+Final audit:
+node --check passed for all JS
+HTML parse check passed for all main pages
+weird broken text / old leftovers / admin sheet references cleaned
+Google Form link পরে বসানোর exact জায়গা:
+[assets/js/main.js (line 2)](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/js/main.js:2)
+এখানে:
+registrationUrl: "#",
+শুধু "#" এর জায়গায় Google Form URL বসিয়ে দিলেই সব Register Team button update হবে
+Future edit কোথা থেকে কী change করবে:
+Home page content: [index.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/index.html)
+Competition details: [competition.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/competition.html)
+Announcements: [announcements.html](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/announcements.html)
+Contact emails / shared links: [assets/js/main.js](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/js/main.js)
+Shared navbar/footer: [assets/js/include.js](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/js/include.js)
+Colors / spacing / responsive styling: [assets/css/custom.css](/F:/Project from 2026/SkillChamp_updated/SkillChamp_updated/assets/css/custom.css)
