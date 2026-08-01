@@ -1,7 +1,22 @@
 const leaderboardConfig = {
-  id: "1k5U5LA7xqoKIDjx4cl8InX-lHpU8UVKU",
+  id:
+    window.skillChampConfig.leaderboardSheetUrl?.match(/\/d\/([^/]+)/)?.[1] ||
+    "1k5U5LA7xqoKIDjx4cl8InX-lHpU8UVKU",
   sheetNames: window.skillChampConfig.leaderboardSheetNames,
 };
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, (char) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return entities[char];
+  });
+}
 
 function parseGVizResponse(text) {
   const match = text.match(/setResponse\(([\s\S]+)\);?$/);
@@ -84,11 +99,11 @@ function renderTopTeams(data) {
       (team) => `
         <article class="score-card p-6">
           <div class="flex items-center justify-between gap-4">
-            <span class="${rankClass(team.rank)}">#${team.rank}</span>
-            <span class="text-sm font-semibold text-slate-500">${team.score}/100</span>
+            <span class="${rankClass(team.rank)}">#${escapeHTML(team.rank)}</span>
+            <span class="text-sm font-semibold text-slate-500">${escapeHTML(team.score)}/100</span>
           </div>
-          <h3 class="mt-5 text-2xl font-extrabold text-slate-900">${team.team}</h3>
-          <p class="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">${team.university}</p>
+          <h3 class="mt-5 text-2xl font-extrabold text-slate-900">${escapeHTML(team.team)}</h3>
+          <p class="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">${escapeHTML(team.university)}</p>
         </article>
       `
     )
@@ -111,10 +126,10 @@ function renderTable(data) {
     .map(
       (team) => `
         <tr>
-          <td><span class="${rankClass(team.rank)}">#${team.rank}</span></td>
-          <td class="font-extrabold text-slate-900">${team.team}</td>
-          <td>${team.university}</td>
-          <td class="font-extrabold text-[#b30f74]">${team.score}</td>
+          <td><span class="${rankClass(team.rank)}">#${escapeHTML(team.rank)}</span></td>
+          <td class="font-extrabold text-slate-900">${escapeHTML(team.team)}</td>
+          <td>${escapeHTML(team.university)}</td>
+          <td class="font-extrabold text-[#c82413]">${escapeHTML(team.score)}</td>
         </tr>
       `
     )
