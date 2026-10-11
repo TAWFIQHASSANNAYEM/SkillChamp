@@ -1,8 +1,8 @@
 window.skillChampConfig = {
-  registrationUrl: "#",
+  registrationUrl: "https://forms.gle/12ryeX8GGkkQeDET6",
   leaderboardSheetUrl:
     "https://docs.google.com/spreadsheets/d/1k5U5LA7xqoKIDjx4cl8InX-lHpU8UVKU/edit?usp=sharing&ouid=104346149072651719390&rtpof=true&sd=true",
-  supportEmail: "connectiya@gmail.com",
+  supportEmail: "skillchamp@connectiya.com",
   alternateEmail: "biz.dev@connectiya.com",
   developerName: "Tawfiq Hassan Nayem",
   developerLinkedIn: "https://www.linkedin.com/in/tawfiqhassannayem/",

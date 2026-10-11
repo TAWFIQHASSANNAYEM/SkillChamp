@@ -45,9 +45,9 @@ Current config block:
 
 ```js
 window.skillChampConfig = {
-  registrationUrl: "#",
+  registrationUrl: "https://forms.gle/12ryeX8GGkkQeDET6",
   leaderboardSheetUrl: "YOUR_SHEET_URL",
-  supportEmail: "connectiya@gmail.com",
+  supportEmail: "skillchamp@connectiya.com",
   alternateEmail: "biz.dev@connectiya.com",
   developerName: "Tawfiq Hassan Nayem",
   developerLinkedIn: "https://www.linkedin.com/in/tawfiqhassannayem/",
@@ -67,12 +67,16 @@ Open:
 Find:
 
 ```js
-registrationUrl: "#",
+registrationUrl: "https://forms.gle/12ryeX8GGkkQeDET6",
 ```
 
-Replace `"#"` with your Google Form link.
+That URL updates all `Register Team` buttons automatically.
 
-That will update all `Register Team` buttons automatically.
+Current registration flow:
+
+- Each team member opens a Connectiya account with Gmail
+- Each member takes the premium subscription using the SkillChamp coupon
+- The team fills up the Google Form with every member's information and the same emails
 
 ### 2. Change support emails
 
@@ -83,9 +87,17 @@ Open:
 Update:
 
 ```js
-supportEmail: "connectiya@gmail.com",
+supportEmail: "skillchamp@connectiya.com",
 alternateEmail: "biz.dev@connectiya.com",
 ```
+
+For campus-round hosting, universities can email `skillchamp@connectiya.com` with the subject:
+
+```text
+Interested to Host SkillChamp campus round in our University
+```
+
+They can also call/text Towsif Pranto at `8801790655076`.
 
 ### 3. Change footer, navbar, shared links
 
